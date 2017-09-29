@@ -1,10 +1,22 @@
-body {
-  margin-top: 0; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:after {
+    box-sizing: border-box; }
+  *:before {
+    box-sizing: border-box; }
 
-h1, h2, h3, h4, h5 {
+html, body, .container {
+  height: 100%; }
+
+@font-face {
+  font-family: 'Red Moon Rising';
+  src: url("../fonts/Red-Moon-Rising-3.0tf"); }
+h1, h2, h4, h5 {
   font-family: "Oswald", sans-serif; }
 
-p {
+h3, p {
   font-family: "Open Sans", sans-serif; }
 
 header {
@@ -26,8 +38,17 @@ header {
     color: white;
     -webkit-text-stroke: 1px black;
     -webkit-text-fill-color: white;
+    letter-spacing: .1em;
     font-size: 42px;
     text-transform: uppercase; }
+    header h1 :hover {
+      cursor: pointer;
+      -webkit-text-stroke: 2px #47e5bc;
+      letter-spacing: .4em;
+      transition: ease-in-out 0.5s; }
+  header a {
+    text-decoration: none;
+    color: inherit; }
   header .navbar {
     height: 160px;
     width: 60%;
@@ -42,8 +63,10 @@ header {
       flex-direction: row; }
       header .navbar ul li {
         display: inline-block;
-        color: #dda6d0;
+        letter-spacing: .2em;
         position: relative;
+        padding: 5px;
+        color: mintcream;
         cursor: pointer; }
         header .navbar ul li::before, header .navbar ul li::after {
           position: absolute;
@@ -51,11 +74,11 @@ header {
           width: 0%;
           height: 2px;
           content: '';
-          background: linear-gradient(to right, #ffe8d1, #dda6d0, #47e5bc, #81e4da);
-          transition: all 0.4s; }
+          background: linear-gradient(to right, turquoise, silver, mistyrose, hotpink);
+          transition: all 0.3s; }
         header .navbar ul li::before {
           left: 0px;
-          top: 0px; }
+          top: 2px; }
         header .navbar ul li::after {
           right: 0px;
           bottom: 0px; }
@@ -67,7 +90,7 @@ header {
         color: inherit; }
 
 .about {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -89,38 +112,66 @@ header {
       height: 130px;
       background-color: rgba(71, 229, 188, 0.5);
       margin-left: 220px;
-      margin-top: -50px;
-      z-index: -1000; }
+      margin-top: -30px;
+      display: flex; }
+      .about .profile-image .title :first-of-type {
+        margin-left: -40px; }
       .about .profile-image .title h3 {
         color: white;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: bold;
         padding-left: 15px;
-        padding-top: 15px;
-        margin-left: -40px; }
+        padding-top: 15px; }
+      .about .profile-image .title img {
+        height: 40px; }
   .about .about-info {
     width: 300px;
     padding: 10px; }
     .about .about-info h2 {
-      border-bottom: solid 3px #dda6d0;
+      border-bottom: solid 1px black;
       color: white;
       -webkit-text-stroke: 1px black;
       -webkit-text-fill-color: white;
-      font-size: 42px;
-      text-transform: uppercase; }
+      letter-spacing: .1em;
+      font-size: 35px;
+      text-transform: uppercase;
+      letter-spacing: .1em; }
+      .about .about-info h2 :hover {
+        cursor: pointer;
+        -webkit-text-stroke: 2px #47e5bc;
+        letter-spacing: .4em;
+        transition: ease-in-out 0.5s; }
+      .about .about-info h2 :hover {
+        cursor: pointer;
+        letter-spacing: .3em;
+        transition: ease-in .3s; }
+    .about .about-info .links {
+      margin: 0 auto; }
+      .about .about-info .links ul {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        justify-content: space-between;
+        flex-direction: row; }
+        .about .about-info .links ul li {
+          display: inline-block;
+          margin: 10px 0;
+          letter-spacing: .1em;
+          color: #dda6d0;
+          position: relative;
+          cursor: pointer; }
+          .about .about-info .links ul li :hover {
+            background-color: #ffe8d1; }
+        .about .about-info .links ul a {
+          text-decoration: none;
+          color: inherit; }
     .about .about-info p {
-      font-size: 18px; }
-
-.location {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: -35px;
-  margin-left: 130px;
-  z-index: 200; }
-  .location img {
-    height: 40px; }
+      margin-top: 30px;
+      font-size: 16px; }
+      .about .about-info p #intro {
+        font-weight: bold;
+        font-size: 18px; }
 
 .social-icons {
   display: flex;
@@ -128,5 +179,80 @@ header {
   .social-icons img {
     width: 50px;
     margin: 20px 0; }
+
+.work {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url(../img/sand.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 1200px; }
+  .work h2 {
+    align-self: center;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 42px;
+    text-transform: uppercase;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    letter-spacing: .1em; }
+    .work h2 :hover {
+      cursor: pointer;
+      -webkit-text-stroke: 2px #47e5bc;
+      letter-spacing: .4em;
+      transition: ease-in-out 0.5s; }
+    .work h2 a {
+      text-decoration: none;
+      color: inherit;
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: white; }
+
+.cards {
+  width: 90%;
+  margin: 30px auto 0; }
+  .cards::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .cards .card {
+    position: relative;
+    min-height: 250px;
+    max-height: 465px;
+    overflow: hidden;
+    margin-top: 30px;
+    border: 1px solid #dda6d0;
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+    @media screen and (min-width: 768px) {
+      .cards .card {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px; } }
+    @media screen and (min-width: 992px) {
+      .cards .card {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px; } }
+    .cards .card .card-image img {
+      width: 100%;
+      display: block; }
+    .cards .card .card-header {
+      width: 100px;
+      padding: 10px 0;
+      background-color: rgba(221, 166, 208, 0.7);
+      position: absolute;
+      bottom: -10px;
+      left: 40%; }
+      .cards .card .card-header h5 {
+        text-align: center; }
+  .cards .mc {
+    height: 462px; }
 
 /*# sourceMappingURL=output.css.map */
