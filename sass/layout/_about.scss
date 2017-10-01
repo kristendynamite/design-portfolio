@@ -1,5 +1,6 @@
 .about {
   margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -20,42 +21,16 @@
         opacity: 0.8;
       }
     }
-    .title {
-      width: 500px;
-      height: 130px;
-      background-color: rgba(71, 229, 188, .5);
-      margin-left: 220px;
-      margin-top: -30px;
-      display: flex;
-      :first-of-type {
-        margin-left: -40px;
-      }
-      h3 {
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        padding-left: 15px;
-        padding-top: 15px;
-      }
-      img {
-        height: 40px;
-      }
-    }
   }
   .about-info {
-    width: 300px;
+    width: 350px;
     padding: 10px;
     h2 {
       border-bottom: solid 1px black;
       @include block-letters;
-      font-size: 35px;
+      font-size: 42px;
       text-transform: uppercase;
       letter-spacing: .1em;
-      :hover {
-        cursor: pointer;
-        letter-spacing: .3em;
-        transition: ease-in .3s;
-      }
     }
     .links {
       margin: 0 auto;
@@ -67,6 +42,7 @@
         justify-content: space-between;
         flex-direction: row;
         li {
+          font-size: 24px;
           display: inline-block;
           margin: 10px 0;
           letter-spacing: .1em;
@@ -86,6 +62,8 @@
     p {
       margin-top: 30px;
       font-size: 16px;
+      text-align: justify;
+      letter-spacing: .1em;
       #intro {
         font-weight: bold;
         font-size: 18px;
