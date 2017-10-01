@@ -1,0 +1,32 @@
+.contact {
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    @include block-letters;
+    font-size: 42px;
+  }
+  .form {
+    border: solid 1px $barbiedoll;
+    display: grid;
+    justify-items: center;
+    width: 40%;
+    padding: 20px;
+    input, textarea {
+      padding-bottom: 20px;
+      font-size: 24px;
+      border: none;
+      font-family: $secondary-font;
+    }
+    button {
+      font-family: $main-font;
+      font-size: 20px;
+      text-transform: uppercase;
+      background: $barbiedoll;
+      padding: 10px;
+    }
+  }
+}

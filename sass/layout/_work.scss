@@ -9,13 +9,12 @@
   background-attachment: fixed;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 1200px;
+  // height: 1200px;
   h2 {
     align-self: center;
     margin: 0 auto;
     text-align: center;
     font-size: 42px;
-    text-transform: uppercase;
     @include block-letters;
     a {
       text-decoration: none;
@@ -27,30 +26,30 @@
 }
 
 .cards {
-  width: 90%;
+  width: 70%;
   margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 15px 70px;
+  justify-items: center;
+  align-content: stretch;
 
-  @include grid-container;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
   .card {
-    position: relative;
     // flex: 1;
-    min-height: 250px;
-    max-height: 465px;
+    // min-height: 250px;
+    // max-height: 465px;
     // max-height: 250px;
     overflow: hidden;
     // position: relative;
     margin-top: 30px;
-    border: 1px solid $lilac;
-    @include grid-column(12);
-    @include tablet-bp {
-      @include grid-column(6);
-    };
-    @include desktop-bp {
-      @include grid-column(6);
-    };
+    padding: 5px;
+    background: rgba(221,166,208, 0.5);
+    border: 3px solid $lilac;
+
+    // @include desktop-bp {
+    //   @include grid-column(6);
+    // };
     .card-image {
       img {
         width: 100%;
@@ -64,13 +63,6 @@
       position: absolute;
       bottom: -10px;
       left: 40%;
-
-      h5 {
-        text-align: center;
-      }
     }
   }
-  .mc {
-    height: 462px;
-    }
-  }
+}

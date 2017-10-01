@@ -14,7 +14,7 @@
       <div class="navbar">
         <ul>
           <li><h2><a href="#top">about</a></h2></li>
-          <li><h2><a href="#middle">work</a></h2></li>
+          <li><h2><a href="#middle">portfolio</a></h2></li>
           <li><h2><a href="#bottom">contact</a></h2></li>
         </ul>
       </div>
@@ -32,8 +32,8 @@
         <h2>Kristen McKee</h2>
         <div class="links">
           <ul>
-            <li><h4>home</h4></li>
-            <li><h4><a href="#middle">work</a></h4></li>
+            <!-- <li><h4>home</h4></li> -->
+            <li><h4><a href="#middle">portfolio</a></h4></li>
             <li><h4><a href="#bottom">contact</a></h4></li>
           </ul>
         </div>
@@ -48,9 +48,31 @@
     </div>
 
     <div id="middle" class="work">
-      <h2><a href="#">Work</a></h2>
+      <h2><a href="#">Portfolio</a></h2>
       <div class="cards">
-        <div class="card mc">
+
+        <div class="card card-1">
+          <div class="card-image">
+            <img src="img/givemo-mobile-app.png" alt="">
+          </div>
+          <!-- <div class="card-copy">
+            <p>An app that allows users to find causes, favorite them, and donate to them quickly and easily</p>
+          </div> -->
+        </div>
+
+        <div class="card card-2">
+          <div class="card-image">
+            <img src="img/portfolio-1.png" alt="">
+          </div>
+          <!-- <div class="card-header">
+            Drunklandia
+          </div>
+          <div class="card-copy">
+            <p>Search app that allows Portland locals to find happy hours nearby. Relies on javascript and jquery to allow use to search and filter.</p>
+          </div> -->
+        </div>
+
+        <div class="card card-3">
           <div class="card-image">
             <img src="img/mc-home-notloggedin.png" alt="">
           </div>
@@ -63,20 +85,10 @@
             <p>Design for a website that connects moms in Portland and allows them to message, access calendars, and read blog posts</p>
           </div> -->
         </div>
-        <div class="card">
+
+        <div class="card card-4">
           <div class="card-image">
-            <img src="img/givemo-mobile-app.png" alt="">
-          </div>
-          <div class="card-header">
-            <h5>givemo<h5>
-          </div>
-          <!-- <div class="card-copy">
-            <p>An app that allows users to find causes, favorite them, and donate to them quickly and easily</p>
-          </div> -->
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="img/portfolio-3.png" alt="">
+            <img src="img/portfolio-6.png" alt="">
           </div>
           <!-- <div class="card-header">
             Tribute Page
@@ -86,18 +98,7 @@
           </div> -->
         </div>
 
-        <div class="card">
-          <div class="card-image">
-            <img src="img/portfolio-1.png" alt="">
-          </div>
-          <!-- <div class="card-header">
-            Drunklandia
-          </div>
-          <div class="card-copy">
-            <p>Search app that allows Portland locals to find happy hours nearby. Relies on javascript and jquery to allow use to search and filter.</p>
-          </div> -->
-        </div>
-        <div class="card">
+        <div class="card card-5">
           <div class="card-image">
             <img src="img/portfolio-4.png" alt="">
           </div>
@@ -109,7 +110,7 @@
           </div> -->
         </div>
 
-        <div class="card">
+        <div class="card card-6">
           <div class="card-image">
             <img src="img/portfolio-5.png" alt="">
           </div>
@@ -120,6 +121,17 @@
             <p>Product page for local clothing company, using absolute/relative positioning, floats, and tables</p>
           </div> -->
         </div>
+      </div>
+    </div>
+    <div id="bottom" class="contact">
+      <div class="form">
+        <h1>Contact</h1>
+        <form action="https://formspree.io/kristen.dynamite@gmail.com" method="POST">
+          <input type="text" name="Submitter" value="" placeholder="Your name"><br>
+          <input type="email" name="_replyto" value="" placeholder="Your email"><br>
+          <textarea name="Message" placeholder="Message"></textarea><br>
+          <center><button type="submit" class="form-button">Send</button></center>
+        </form>
       </div>
     </div>
   </body>
