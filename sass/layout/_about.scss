@@ -16,7 +16,9 @@
       position: relative;
       left: 40px;
       top: 40px;
-      z-index: -1;
+      &:hover {
+        opacity: 0.8;
+      }
     }
     .title {
       width: 500px;
