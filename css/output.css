@@ -42,8 +42,8 @@ header {
     -webkit-text-fill-color: white;
     letter-spacing: .1em;
     font-size: 42px;
-    text-transform: uppercase; }
-    header h1 :hover {
+    cursor: pointer; }
+    header h1:hover {
       text-shadow: 4px -4px 0 #ffe8d1, -4px 4px 0 #47e5bc; }
   header a {
     text-decoration: none;
@@ -130,7 +130,7 @@ header {
       font-size: 42px;
       text-transform: uppercase;
       letter-spacing: .1em; }
-      .about .about-info h2 :hover {
+      .about .about-info h2:hover {
         text-shadow: 4px -4px 0 #ffe8d1, -4px 4px 0 #47e5bc; }
     .about .about-info .links {
       margin: 0 auto; }
@@ -206,7 +206,7 @@ header {
     -webkit-text-stroke: 1px black;
     -webkit-text-fill-color: white;
     letter-spacing: .1em; }
-    .work h2 :hover {
+    .work h2:hover {
       text-shadow: 4px -4px 0 #ffe8d1, -4px 4px 0 #47e5bc; }
     .work h2 a {
       text-decoration: none;
@@ -224,7 +224,7 @@ header {
   justify-items: center;
   align-content: stretch; }
   .cards .card {
-    overflow: scroll;
+    overflow: hidden;
     margin-top: 30px;
     padding: 5px;
     background: rgba(255, 232, 209, 0.5);
@@ -302,7 +302,7 @@ header {
       letter-spacing: .1em;
       font-size: 42px;
       margin-bottom: 20px; }
-      .contact .form h1 :hover {
+      .contact .form h1:hover {
         text-shadow: 4px -4px 0 #ffe8d1, -4px 4px 0 #47e5bc; }
     .contact .form input, .contact .form textarea {
       padding-top: 5px;
@@ -317,7 +317,11 @@ header {
       font-size: 20px;
       text-transform: uppercase;
       background: #ffe8d1;
-      padding: 10px; }
+      padding: 10px;
+      cursor: pointer; }
+      .contact .form button:hover {
+        background-color: #47e5bc;
+        color: mintcream; }
 
 @media screen and (max-width: 768px) {
   .contact .form {
