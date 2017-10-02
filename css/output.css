@@ -88,6 +88,13 @@ header {
         text-decoration: none;
         color: inherit; }
 
+@media screen and (max-width: 768px) {
+  header .navbar {
+    width: 300px; }
+    header .navbar ul li {
+      margin: 20px; }
+    header .navbar ul h2 {
+      font-size: 20px; } }
 .about {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -101,10 +108,11 @@ header {
     margin-left: 50px;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    width: 650px;
-    height: 650px; }
+    width: 450px;
+    height: 450px; }
     .about .profile-image img {
       position: relative;
+      width: 400px;
       left: 40px;
       top: 40px; }
       .about .profile-image img:hover {
@@ -148,7 +156,6 @@ header {
           color: inherit; }
     .about .about-info p {
       margin-top: 30px;
-      font-size: 16px;
       text-align: justify;
       letter-spacing: .1em; }
       .about .about-info p #intro {
@@ -162,6 +169,21 @@ header {
     width: 50px;
     margin: 20px 0; }
 
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    height: auto; }
+    .about .profile-image {
+      border: none; }
+      .about .profile-image img {
+        top: 0;
+        left: 0; }
+    .about .social-icons {
+      flex-direction: row; }
+      .about .social-icons > * {
+        padding-left: 15px; }
+      .about .social-icons > * {
+        padding-right: 10px; } }
 .work {
   display: flex;
   flex-direction: column;
@@ -172,7 +194,8 @@ header {
   background-size: cover;
   background-attachment: fixed;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  color: #35363a; }
   .work h2 {
     align-self: center;
     margin: 0 auto;
@@ -201,7 +224,7 @@ header {
   justify-items: center;
   align-content: stretch; }
   .cards .card {
-    overflow: hidden;
+    overflow: scroll;
     margin-top: 30px;
     padding: 5px;
     background: rgba(255, 232, 209, 0.5);
@@ -230,14 +253,31 @@ header {
         opacity: 1; }
       .cards .card .card-info .card-header {
         padding-top: 10px;
+        padding-bottom: 20px;
         font-size: 24px;
         height: 20%;
         text-align: center; }
       .cards .card .card-info .card-copy {
         font-family: "Open Sans", sans-serif;
-        padding: 10px;
-        text-align: center; }
+        padding: 18px;
+        text-align: justify; }
+        .cards .card .card-info .card-copy > * {
+          padding-top: 10px; }
+        .cards .card .card-info .card-copy :first-child {
+          padding-bottom: 20px; }
 
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; }
+    .cards .card {
+      overflow: scroll; }
+      .cards .card .card-info .card-header {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px; }
+      .cards .card .card-info .card-copy {
+        font-size: 14px;
+        text-align: center; } }
 .contact {
   background-color: #ffe8d1;
   height: 100vh;
@@ -271,12 +311,18 @@ header {
       font-weight: lighter;
       border: none;
       font-family: "Open Sans", sans-serif;
-      border-bottom: 1px solid black; }
+      border-bottom: 1px solid #35363a; }
     .contact .form button {
       font-family: "Oswald", sans-serif;
       font-size: 20px;
       text-transform: uppercase;
       background: #ffe8d1;
       padding: 10px; }
+
+@media screen and (max-width: 768px) {
+  .contact .form {
+    width: 300px; }
+    .contact .form input, .contact .form text-area {
+      width: 90%; } }
 
 /*# sourceMappingURL=output.css.map */

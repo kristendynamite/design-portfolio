@@ -11,10 +11,11 @@
     margin-left: 50px;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    width: 650px;
-    height: 650px;
+    width: 450px;
+    height: 450px;
     img {
       position: relative;
+      width: 400px;
       left: 40px;
       top: 40px;
       &:hover {
@@ -61,7 +62,6 @@
     }
     p {
       margin-top: 30px;
-      font-size: 16px;
       text-align: justify;
       letter-spacing: .1em;
       #intro {
@@ -80,5 +80,24 @@
   img {
     width: 50px;
     margin: 20px 0;
+  }
+}
+
+@media #{$tablet-bp} {
+  .about {
+    flex-direction: column;
+    height: auto;
+    .profile-image {
+      border: none;
+      img {
+        top: 0;
+        left: 0;
+      }
+    }
+    .social-icons {
+      flex-direction: row;
+      >* {padding-left: 15px;}
+      >* {padding-right: 10px;}
+    }
   }
 }

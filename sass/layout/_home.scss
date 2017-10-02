@@ -70,3 +70,19 @@ header {
     }
   }
 }
+
+@media #{$tablet-bp} {
+  header {
+    .navbar {
+      width: 300px;
+      ul {
+        li {
+          margin: 20px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
   background-attachment: fixed;
   padding-top: 50px;
   padding-bottom: 50px;
-  // height: 1200px;
+  color: #35363a;
   h2 {
     align-self: center;
     margin: 0 auto;
@@ -36,22 +36,13 @@
   align-content: stretch;
 
   .card {
-    // flex: 1;
-    // min-height: 250px;
-    // max-height: 465px;
-    // max-height: 250px;
-    overflow: hidden;
-    // position: relative;
+    overflow: scroll;
     margin-top: 30px;
     padding: 5px;
     background: rgba(255,232,209,0.5);
     border: 1px solid $barbiedoll;
     position: relative;
 
-
-    // @include desktop-bp {
-    //   @include grid-column(6);
-    // };
     .card-image {
       img {
         width: 100%;
@@ -79,14 +70,39 @@
       }
       .card-header {
         padding-top: 10px;
+        padding-bottom: 20px;
         font-size: 24px;
         height: 20%;
         text-align: center;
       }
       .card-copy {
         font-family: $secondary-font;
-        padding: 10px;
-        text-align: center;
+        padding: 18px;
+        text-align: justify;
+        >* {padding-top: 10px;}
+        :first-child {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-bp} {
+  .cards {
+    grid-template-columns: 1fr;
+    .card {
+      overflow: scroll;
+      .card-info {
+        .card-header {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-size: 20px;
+        }
+        .card-copy {
+          font-size: 14px;
+          text-align: center;
+        }
       }
     }
   }
