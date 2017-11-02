@@ -1,106 +1,98 @@
 .about {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  @media #{$desktop-bp} {
+    flex-direction: row;
+    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  };
   .profile-image {
     position: relative;
-    margin-left: 50px;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border: none;
     width: 450px;
     height: 450px;
+    @media #{$desktop-bp} {
+      margin-left: 50px;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+    };
     img {
       position: relative;
       width: 400px;
-      left: 40px;
-      top: 40px;
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-  .about-info {
-    width: 350px;
-    padding: 10px;
-    h2 {
-      border-bottom: solid 1px black;
-      @include block-letters;
-      font-size: 42px;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-    }
-    .links {
-      margin: 0 auto;
-      ul {
-        list-style: none;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        justify-content: space-between;
-        flex-direction: row;
-        li {
-          font-size: 24px;
-          display: inline-block;
-          margin: 10px 0;
-          letter-spacing: .1em;
-          color: $lilac;
-          position: relative;
-          cursor: pointer;
-          :hover {
-            background-color: $barbiedoll;
-          }
-        }
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-      }
-    }
-    p {
-      margin-top: 30px;
-      text-align: justify;
-      letter-spacing: .1em;
-      #intro {
-        font-weight: bold;
-        font-size: 18px;
-      }
+      left: 0;
+      top: 0;
+      @media #{$desktop-bp} {
+        left: 40px;
+        top: 40px;
+      };
     }
   }
 }
 
-
+.about-info {
+  width: 350px;
+  padding: 10px;
+  h2 {
+    border-bottom: solid 1px black;
+    @include block-letters;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+  .links {
+    margin: 0 auto;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      justify-content: space-between;
+      flex-direction: row;
+      li {
+        font-size: 24px;
+        display: inline-block;
+        margin: 10px 0;
+        letter-spacing: .1em;
+        color: $lilac;
+        position: relative;
+        cursor: pointer;
+        :hover {
+          background-color: $barbiedoll;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  p {
+    margin-top: 30px;
+    text-align: justify;
+    letter-spacing: .1em;
+    #intro {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
 
 .social-icons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  >* {padding-left: 15px;}
+  >* {padding-right: 10px;}
+  @media #{$desktop-bp} {
+    flex-direction: column;
+    padding: 10px 0;
+  };
   img {
     width: 50px;
     margin: 20px 0;
-    &:hover {
-  
-    }
-  }
-}
-
-@media #{$tablet-bp} {
-  .about {
-    flex-direction: column;
-    height: auto;
-    .profile-image {
-      border: none;
-      img {
-        top: 0;
-        left: 0;
-      }
-    }
-    .social-icons {
-      flex-direction: row;
-      >* {padding-left: 15px;}
-      >* {padding-right: 10px;}
-    }
   }
 }
