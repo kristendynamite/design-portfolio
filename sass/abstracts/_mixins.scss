@@ -21,3 +21,8 @@
   	 -4px  4px 0 $seafoam;
   }
 }
+
+@mixin link-decoration {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,5 +1,5 @@
-.about {
-  margin: 0 auto;
+.about-project {
+  margin: 10px auto 50px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -8,33 +8,29 @@
   @media #{$desktop-bp} {
     flex-direction: row;
     height: 100vh;
-    margin-bottom: 50px;
   };
-  .profile-image {
-    position: relative;
+  #project-image {
     border: none;
+    width: 400px;
+    min-width: 350px;
     @media #{$desktop-bp} {
-      width: 450px;
-      height: 450px;
-      margin-left: 50px;
-      border-top: 1px solid black;
-      border-left: 1px solid black;
+      width: 40%;
     };
-    img {
-      position: relative;
-      width: 400px;
-      left: 0;
-      top: 0;
-
-      @media #{$desktop-bp} {
-        left: 40px;
-        top: 40px;
-      };
-    }
+    // img {
+    //   position: relative;
+    //   width: 100%;
+    //   left: 0;
+    //   top: 0;
+    //
+    //   @media #{$desktop-bp} {
+    //     left: 40px;
+    //     top: 40px;
+    //   };
+    // }
   }
 }
 
-.about-info {
+.project-info {
   width: 350px;
   padding: 10px;
   h2 {
@@ -43,11 +39,15 @@
     font-size: 42px;
     text-transform: uppercase;
     letter-spacing: .1em;
+    text-align: center;
     text-shadow:
       4px -4px 0 $barbiedoll,
   	 -4px  4px 0 $seafoam;
+    @media #{$desktop-bp} {
+      text-align: left;
+    }
   }
-  .links {
+  .project-links {
     margin: 0 auto;
     ul {
       list-style: none;
@@ -104,9 +104,9 @@
   }
 }
 
-.social-icons {
+.arrow-icons {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   >* {padding-left: 15px;}
   >* {padding-right: 10px;}
   @media #{$desktop-bp} {
@@ -116,10 +116,20 @@
   img {
     width: 50px;
     margin: 20px 0;
+  }
+  #next {
     @media #{$desktop-bp} {
       transition: 2s ease-out;
       &:hover {
-        transform: rotate(45deg);
+        transform: rotate(20deg);
+      }
+    };
+  }
+  #back {
+    @media #{$desktop-bp} {
+      transition: 2s ease-out;
+      &:hover {
+        transform: rotate(-20deg);
       }
     };
   }

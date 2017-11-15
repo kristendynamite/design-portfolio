@@ -1,10 +1,12 @@
 header {
-  background-image: url(../img/sands.jpg);
+  background-image: url(../img/gradient-nature.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
+  // background: linear-gradient(to bottom, $seablue, silver, black);
+  height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -15,6 +17,9 @@ header {
     margin: 0 auto;
     text-align: center;
     @include block-letters;
+    text-shadow:
+      4px -4px 0 $barbiedoll,
+  	 -4px  4px 0 $seafoam;
     font-size: 42px;
     cursor: pointer;
   }
@@ -33,7 +38,10 @@ header {
       align-items: center;
       justify-content: center;
       justify-content: space-around;
-      flex-direction: row;
+      flex-direction: column;
+      h2 {
+        font-size: 20px;
+      }
       li {
         display: inline-block;
         letter-spacing: .2em;
@@ -73,14 +81,15 @@ header {
 
 @media #{$tablet-bp} {
   header {
+    h1 {
+      text-shadow: none;
+    }
     .navbar {
-      width: 300px;
       ul {
-        li {
-          margin: 20px;
-        }
+        flex-direction: row;
+        justify-content: space-between;
         h2 {
-          font-size: 20px;
+          font-size: 25px;
         }
       }
     }
