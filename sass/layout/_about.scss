@@ -105,19 +105,25 @@
 }
 
 .social-icons {
+  width: 350px;
   display: flex;
   flex-direction: row;
-  >* {padding-left: 15px;}
-  >* {padding-right: 10px;}
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  // >* {padding-left: 10px;}
+  // >* {padding-right: 10px;}
   @media #{$desktop-bp} {
     flex-direction: column;
     padding: 10px 0;
+    width: auto;
   };
   img {
-    width: 50px;
-    margin: 20px 0;
+    height: 50px;
+    width: auto;
+    margin: 20px 10px;
     @media #{$desktop-bp} {
-      transition: 2s ease-out;
+      transition: 1s ease-out;
       &:hover {
         transform: rotate(45deg);
       }
